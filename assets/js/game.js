@@ -1,20 +1,22 @@
 window.alert ("welcome to robot gladiators");
 
+//Game States 
+// "WIN" - Player's robot defeats the enemy robot
+// :"LOSE" - Player's robot is defeated by enemy robot
+
 var playerName = window.prompt("What is your robot's name?!");
 var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney =15000
 
-// You can also log multiple values at once like this
-console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roborto";
+var enemyName = ["Roborto","Amy", "Roboballs"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
 
 
-var fight = function() {
+var fight = function(enemyName) {
     // Alert players that they are starting the round
     window.alert("The round is starting");
     var promptFight = window.prompt("Would you like to FIGHT or Skip this battle? Enter 'Fight' or 'Skip'to choose.");
@@ -59,10 +61,7 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     }
  }      
 }
-    
+  for( var i=0; i <enemyName.length; i++) {
+     fight(enemyName[i]);
 
-      
-
-
-
-fight();
+  }
